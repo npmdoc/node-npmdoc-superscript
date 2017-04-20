@@ -1,0 +1,602 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://superscriptjs.com"
+
+    >superscript (v1.1.0)</a>
+</h1>
+<h4>A dialog system and bot engine for creating human-like chat bots.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.superscript">module superscript</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">superscript.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">superscript.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">superscript.</span>postParse</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">superscript.</span>time</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.superscript.default">module superscript.default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.default.setup">
+            function <span class="apidocSignatureSpan">superscript.default.</span>setup
+            <span class="apidocSignatureSpan">(options = {}, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.superscript.logger">module superscript.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.logger.default">
+            function <span class="apidocSignatureSpan">superscript.logger.</span>default
+            <span class="apidocSignatureSpan">(logPath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.superscript.postParse">module superscript.postParse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.postParse.default">
+            function <span class="apidocSignatureSpan">superscript.postParse.</span>default
+            <span class="apidocSignatureSpan">(regexp, message, user)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.superscript.time">module superscript.time</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getDOW">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getDOW
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getDate">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getDate
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getDateTomorrow">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getDateTomorrow
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getDayOfWeek">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getDayOfWeek
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getGreetingTimeOfDay">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getGreetingTimeOfDay
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getMonth">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getMonth
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getSeason">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getSeason
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getTime">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getTime
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superscript.time.getTimeOfDay">
+            function <span class="apidocSignatureSpan">superscript.time.</span>getTimeOfDay
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.superscript" id="apidoc.module.superscript">module superscript</a></h1>
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.superscript.default" id="apidoc.module.superscript.default">module superscript.default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.default.setup" id="apidoc.element.superscript.default.setup">
+        function <span class="apidocSignatureSpan">superscript.default.</span>setup
+        <span class="apidocSignatureSpan">(options = {}, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setup(options = {}, callback) {
+  options = _lodash2.default.merge(defaultOptions, options);
+
+  // Uses schemas to create models for the db connection to use
+  _factSystem2.default.setupFactSystem(options.mongoURI, options.factSystem, (err, coreFactSystem) =&#x3e; {
+    if (err) {
+      return callback(err);
+    }
+
+    const db = (0, _connect2.default)(options.mongoURI);
+    const logger = new _logger2.default(options.logPath);
+    const coreChatSystem = _chatSystem2.default.setupChatSystem(db, coreFactSystem, logger);
+
+    const instance = new SuperScriptInstance(coreChatSystem, coreFactSystem, options);
+
+<span class="apidocCodeCommentSpan">    /**
+     *  When you want to use multitenancy, don&#x27;t return a bot, but instead an instance that can
+     *  get bots in different tenancies. Then you can just do:
+     *
+     *  instance.getBot(&#x27;myBot&#x27;);
+     */
+</span>    if (options.useMultitenancy) {
+      return callback(null, instance);
+    }
+
+    const bot = instance.getBot(&#x27;master&#x27;);
+    if (options.importFile) {
+      return bot.importFile(options.importFile, err =&#x3e; callback(err, bot));
+    }
+    return callback(null, bot);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const options = {
+factSystem: {
+  clean: true,
+},
+importFile: &#x27;./data.json&#x27;,
+};
+
+superscript.<span class="apidocCodeKeywordSpan">setup</span>(options, (err, botInstance) =&#x3e; {
+if (err) {
+  console.error(err);
+}
+bot = botInstance;
+
+server.listen(PORT, () =&#x3e; {
+  console.log(`===&#x3e; 🚀  Server is now running on port ${PORT}`);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.superscript.logger" id="apidoc.module.superscript.logger">module superscript.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.logger.default" id="apidoc.element.superscript.logger.default">
+        function <span class="apidocSignatureSpan">superscript.logger.</span>default
+        <span class="apidocSignatureSpan">(logPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Logger {
+  constructor(logPath) {
+    if (logPath) {
+      try {
+        _mkdirp2.default.sync(logPath);
+        this.logPath = logPath;
+      } catch (e) {
+        console.error(`Could not create logs folder at ${logPath}: ${e}`);
+      }
+    }
+  }
+
+  log(message, logName = &#x27;default&#x27;) {
+    if (this.logPath) {
+      const filePath = `${this.logPath}/${logName}.log`;
+      try {
+        _fs2.default.appendFileSync(filePath, message);
+      } catch (e) {
+        console.error(`Could not write log to file with path: ${filePath}`);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.superscript.postParse" id="apidoc.module.superscript.postParse">module superscript.postParse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.postParse.default" id="apidoc.element.superscript.postParse.default">
+        function <span class="apidocSignatureSpan">superscript.postParse.</span>default
+        <span class="apidocSignatureSpan">(regexp, message, user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function postParse(regexp, message, user) {
+  if (_lodash2.default.isNull(regexp)) {
+    return null;
+  }
+
+  regexp = regexp.replace(searchRE, (match, p1, p2) =&#x3e; {
+    let replacements = null;
+
+    switch (p1) {
+      case &#x27;name&#x27;:
+        replacements = message.names;break;
+      case &#x27;noun&#x27;:
+        replacements = message.nouns;break;
+      case &#x27;adverb&#x27;:
+        replacements = message.adverbs;break;
+      case &#x27;verb&#x27;:
+        replacements = message.verbs;break;
+      case &#x27;pronoun&#x27;:
+        replacements = message.pronouns;break;
+      case &#x27;adjective&#x27;:
+        replacements = message.adjectives;break;
+      default:
+        break;
+    }
+
+    if (replacements.length &#x3e; 0) {
+      if (p2 === &#x27;s&#x27;) {
+        return `(${replacements.join(&#x27;|&#x27;)})`;
+      }
+
+      let index = Number.parseInt(p2);
+      index = index ? index - 1 : 0;
+      if (index &#x3c; replacements.length) {
+        return `(${replacements[index]})`;
+      }
+    }
+
+    return &#x27;&#x27;;
+  });
+
+  if (user &#x26;&#x26; user.history) {
+    const history = user.history;
+    regexp = regexp.replace(inputReplyRE, (match, p1, p2) =&#x3e; {
+      const index = p2 ? Number.parseInt(p2) : 0;
+      return history[index][p1] ? history[index][p1].original : match;
+    });
+  }
+
+  return regexp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.superscript.time" id="apidoc.module.superscript.time">module superscript.time</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getDOW" id="apidoc.element.superscript.time.getDOW">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getDOW
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDOW(cb) {
+  cb(null, (0, _moment2.default)().format(&#x27;dddd&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getDate" id="apidoc.element.superscript.time.getDate">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getDate
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDate(cb) {
+  cb(null, (0, _moment2.default)().format(&#x27;ddd, MMMM Do&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getDateTomorrow" id="apidoc.element.superscript.time.getDateTomorrow">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getDateTomorrow
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDateTomorrow(cb) {
+  const date = (0, _moment2.default)().add(&#x27;d&#x27;, 1).format(&#x27;ddd, MMMM Do&#x27;);
+  cb(null, date);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getDayOfWeek" id="apidoc.element.superscript.time.getDayOfWeek">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getDayOfWeek
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDayOfWeek(cb) {
+  cb(null, (0, _moment2.default)().format(&#x27;dddd&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getGreetingTimeOfDay" id="apidoc.element.superscript.time.getGreetingTimeOfDay">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getGreetingTimeOfDay
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getGreetingTimeOfDay(cb) {
+  const date = new Date();
+  const rounded = new Date(Math.round(date.getTime() / COEFF) * COEFF);
+  const time = (0, _moment2.default)(rounded).format(&#x27;H&#x27;);
+  let tod;
+  if (time &#x3c; 12) {
+    tod = &#x27;morning&#x27;;
+  } else if (time &#x3c; 17) {
+    tod = &#x27;afternoon&#x27;;
+  } else {
+    tod = &#x27;evening&#x27;;
+  }
+
+  cb(null, tod);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getMonth" id="apidoc.element.superscript.time.getMonth">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getMonth
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMonth(cb) {
+  let reply = &#x27;&#x27;;
+  if (this.message.words.indexOf(&#x27;next&#x27;) !== -1) {
+    reply = (0, _moment2.default)().add(&#x27;M&#x27;, 1).format(&#x27;MMMM&#x27;);
+  } else if (this.message.words.indexOf(&#x27;previous&#x27;) !== -1) {
+    reply = (0, _moment2.default)().subtract(&#x27;M&#x27;, 1).format(&#x27;MMMM&#x27;);
+  } else if (this.message.words.indexOf(&#x27;first&#x27;) !== -1) {
+    reply = &#x27;January&#x27;;
+  } else if (this.message.words.indexOf(&#x27;last&#x27;) !== -1) {
+    reply = &#x27;December&#x27;;
+  } else {
+    reply = (0, _moment2.default)().format(&#x27;MMMM&#x27;);
+  }
+  cb(null, reply);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getSeason" id="apidoc.element.superscript.time.getSeason">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getSeason
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSeason(cb) {
+  cb(null, getSeason());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getTime" id="apidoc.element.superscript.time.getTime">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getTime
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTime(cb) {
+  const date = new Date();
+  const rounded = new Date(Math.round(date.getTime() / COEFF) * COEFF);
+  const time = (0, _moment2.default)(rounded).format(&#x27;h:mm&#x27;);
+  cb(null, `The time is ${time}`);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.getSeason = function getSeason(cb) {
+cb(null, getSeason());
+};
+
+exports.getTime = function getTime(cb) {
+const date = new Date();
+const rounded = new Date(Math.round(date.<span class="apidocCodeKeywordSpan">getTime</span>() / COEFF) * COEFF);
+const time = (0, _moment2.default)(rounded).format(&#x27;h:mm&#x27;);
+cb(null, `The time is ${time}`);
+};
+
+exports.getGreetingTimeOfDay = function getGreetingTimeOfDay(cb) {
+const date = new Date();
+const rounded = new Date(Math.round(date.getTime() / COEFF) * COEFF);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.superscript.time.getTimeOfDay" id="apidoc.element.superscript.time.getTimeOfDay">
+        function <span class="apidocSignatureSpan">superscript.time.</span>getTimeOfDay
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTimeOfDay(cb) {
+  const date = new Date();
+  const rounded = new Date(Math.round(date.getTime() / COEFF) * COEFF);
+  const time = (0, _moment2.default)(rounded).format(&#x27;H&#x27;);
+  let tod;
+  if (time &#x3c; 12) {
+    tod = &#x27;morning&#x27;;
+  } else if (time &#x3c; 17) {
+    tod = &#x27;afternoon&#x27;;
+  } else {
+    tod = &#x27;night&#x27;;
+  }
+
+  cb(null, tod);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
